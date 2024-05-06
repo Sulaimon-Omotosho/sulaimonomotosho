@@ -25,10 +25,10 @@ const items = [
   {
     id: 3,
     color: 'from-violet-300 to-purple-300',
-    title: 'Portfolio Site',
-    desc: 'I developed a sleek portfolio site for a digital marketer, highlighting her expertise and services. Explore her portfolio and services with ease on this professional website.',
-    img: '/Layo.png',
-    link: 'https://layo.vercel.app/',
+    title: 'E-Commerce Site',
+    desc: 'Developed an elegant e-commerce platform for a jewelry brand, offering a curated collection of exquisite pieces. Browse through stunning designs and find your perfect accessory with ease. Elevate your style with our beautifully crafted jewelry.',
+    img: '/Onyiisi.png',
+    link: 'https://onyiisitest.vercel.app/',
   },
   {
     id: 4,
