@@ -12,7 +12,26 @@ const AboutPage = () => {
   const isSkillRefInView = useInView(skillRef, { margin: '-100px' })
 
   const experienceRef = useRef()
-  const isExperienceRefInView = useInView(experienceRef)
+  const isExperienceRefInView = useInView(experienceRef, { margin: '-100px' })
+
+  const itemRef1 = useRef()
+  const isItemRefInView1 = useInView(
+    itemRef1,
+    // { margin: '-100px' },
+    { once: true }
+  )
+  const itemRef2 = useRef()
+  const isItemRefInView2 = useInView(
+    itemRef2,
+    // { margin: '-100px' },
+    { once: true }
+  )
+  const itemRef3 = useRef()
+  const isItemRefInView3 = useInView(
+    itemRef3,
+    // { margin: '-100px' },
+    { once: true }
+  )
 
   return (
     <motion.div
@@ -40,6 +59,8 @@ const AboutPage = () => {
               Just because something doesn&apos;t do what you planned it to do
               doesn&apos;t mean it&apos;s useless. - Thomas Edison
             </span>
+
+            {/* SIGNATURE  */}
             <div className='self-end'>
               <svg
                 width='185'
@@ -153,7 +174,7 @@ const AboutPage = () => {
           >
             {/* TITLE  */}
             <motion.h1
-              initial={{ x: '-300px' }}
+              initial={{ x: '-350px' }}
               animate={isExperienceRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.3 }}
               className='font-bold text-2xl'
@@ -161,13 +182,14 @@ const AboutPage = () => {
               EXPERIENCE
             </motion.h1>
             {/* LIST  */}
-            <motion.div
-              className=''
-              initial={{ x: '-300px' }}
-              animate={isExperienceRefInView ? { x: 0 } : {}}
-            >
+            <div className=''>
               {/* ITEM  */}
-              <div className='flex justify-between h-fit'>
+              <motion.div
+                ref={itemRef1}
+                initial={{ x: '-350px' }}
+                animate={isItemRefInView1 ? { x: 0 } : {}}
+                className='flex justify-between h-fit'
+              >
                 {/* LEFT  */}
                 <div className='w-1/3'>
                   {/* PROJECT  */}
@@ -200,9 +222,14 @@ const AboutPage = () => {
                 </div>
                 {/* RIGHT  */}
                 <div className='w-1/3'></div>
-              </div>
+              </motion.div>
               {/* ITEM  */}
-              <div className='flex justify-between h-fit'>
+              <motion.div
+                ref={itemRef2}
+                initial={{ x: '350px' }}
+                animate={isItemRefInView2 ? { x: 0 } : {}}
+                className='flex justify-between h-fit'
+              >
                 {/* LEFT  */}
                 <div className='w-1/3'></div>
                 {/* CENTER  */}
@@ -236,9 +263,14 @@ const AboutPage = () => {
                     Technical & Generational
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* ITEM  */}
-              <div className='flex justify-between h-fit'>
+              <motion.div
+                ref={itemRef3}
+                initial={{ x: '-350px' }}
+                animate={isItemRefInView3 ? { x: 0 } : {}}
+                className='flex justify-between h-fit'
+              >
                 {/* LEFT  */}
                 <div className='w-1/3'>
                   {/* PROJECT  */}
@@ -269,8 +301,8 @@ const AboutPage = () => {
                 </div>
                 {/* RIGHT  */}
                 <div className='w-1/3'></div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
 
